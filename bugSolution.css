@@ -1,0 +1,5 @@
+The issue arises from how `calc()` handles percentages within the context of other units. Percentages are relative to the containing element's size; therefore, if the containing element's size isn't explicitly set or determined before the `calc()` expression is evaluated, the percentage value won't be correctly calculated. 
+
+To address this, ensure that the container's dimensions are defined before using percentage values within `calc()`.  You might need to restructure your CSS to guarantee this order. For instance, set the `width` of the parent container explicitly, then define the child element's width using `calc()` with percentages.
+
+Here's a possible solution demonstrating how to explicitly set the width of the parent container before using percentages in `calc()`:
